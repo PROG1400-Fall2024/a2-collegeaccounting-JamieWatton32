@@ -51,7 +51,7 @@ public class Main {
         double fees = sumFees(students);
         double salaries = sumSalaries(staffMembers);
         double total = fees - salaries;
-        System.out.println("Results");
+        System.out.println("\n----------------Accounting Results----------------");
         System.out.println("Incoming: $" + String.format("%.2f", fees));
         System.out.println("Outgoing: $" + String.format("%.2f", salaries));
         System.out.println("Total: $" + String.format("%.2f", total));

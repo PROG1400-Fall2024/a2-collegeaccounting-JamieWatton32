@@ -37,7 +37,7 @@ public class Staff extends Person {
 
     @Override
     public String toString() {
-        return "name =" + this.getName() + " "
+        return "name = " + this.getName() + " "
                 + "address = " + this.getAddress() + " "
                 + "years = " + this.yearsOfService + " "
                 + "salary = " + this.salary;
