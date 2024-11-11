@@ -8,7 +8,6 @@ public class Student extends Person {
         // 2900 is base here because it makes it easy to have 1 year = 3000, 2 year = 3100
         this.fee = 2900 + (year*100);
     }
-
     public double getYear(){
         return this.year;
     }
@@ -16,6 +15,8 @@ public class Student extends Person {
     public double getFee() {
         return fee;
     }
+
+
     public double getInvoicedFee(){
         return this.fee/2;
     }
@@ -30,7 +31,7 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return "name =" + this.getName()+ " "
+        return "name = " + this.getName()+ " "
                 + "address = " + this.getAddress()+ " "
                 + "year = " + this.year+ " "
                 + "fee = " + this.fee;
