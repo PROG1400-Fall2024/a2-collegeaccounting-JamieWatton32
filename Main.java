@@ -17,8 +17,6 @@ public class Main {
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
                     null, options,null);
-
-
             if (choice == 0) { // Student selected
                 String name = JOptionPane.showInputDialog("Enter Student's Name:");
                 // handle null or "cancelled". Sends user back to beginning and nothing added to list
@@ -40,17 +38,14 @@ public class Main {
 
             } else if (choice == 1) { // Staff selected
                 String name = JOptionPane.showInputDialog("Enter Staff's Name:");
-
                 if(name == null){
                     continue;
                 }
                 String address = JOptionPane.showInputDialog("Enter Staff's Address:");
-
                 if(address == null){
                     continue;
                 }
                 int yearsOfService = validatedYearsOfService();
-
                 if(yearsOfService == -1){
                     continue;
                 }
@@ -69,13 +64,11 @@ public class Main {
     public static void printResults(ArrayList<Student> students, ArrayList<Staff> staffMembers){
         //Handle empty array cases. Allows both or just one of either to be printed. Say the accountant only wanted the
         //outgoing or incoming.
-
         if(!students.isEmpty()) {
             System.out.println("----------------Students-----------------");
             for (Student student : students) {
                 System.out.println(student.toString());
             }
-
         }
         if(!staffMembers.isEmpty()){
             System.out.println("----------------Staff-----------------");
@@ -86,9 +79,6 @@ public class Main {
         double fees = sumFees(students); //0 if empty
         double salaries = sumSalaries(staffMembers); // 0 if empty
         double total = fees - salaries;
-        if(total < 0) {
-
-        }
         System.out.println("\n----------------Accounting Results----------------");
         System.out.println("Incoming: $" + String.format("%.2f", fees));
         //I didnt want - signs in the report if there is a deficit but instead to have the () things
