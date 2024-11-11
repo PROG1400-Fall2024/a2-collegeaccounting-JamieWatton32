@@ -5,7 +5,7 @@ public class Student extends Person {
     public Student(String name, String address, int year) {
         super(name, address);
         this.year = year;
-        // 2900 is base here because it makes it easy to have 1 year = 3000, 2 year = 3100
+        // 2900 is base here because it makes it easy to have 1 year = 3000, 2 year = 3100, etc
         this.fee = 2900 + (year*100);
     }
     public double getYear(){

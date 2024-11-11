@@ -1,4 +1,4 @@
-public class Person {
+public abstract class Person {
     private String name;
     private String address;
 
@@ -30,4 +30,5 @@ public class Person {
                 ", address='" + address + '\'' +
                 '}';
     }
+
 }
