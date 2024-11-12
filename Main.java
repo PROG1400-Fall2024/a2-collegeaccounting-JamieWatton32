@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<>();
         ArrayList<Staff> staffMembers = new ArrayList<>();
-        ArrayList<Person> people = new ArrayList<>();
         // Only way to break loop is to select "Finished" or to close the program.
         while (true) {
             // Show initial option dialog
@@ -34,8 +33,6 @@ public class Main {
                     continue;
                 }
                 students.add(new Student(name, address, year));
-
-
             } else if (choice == 1) { // Staff selected
                 String name = JOptionPane.showInputDialog("Enter Staff's Name:");
                 if(name == null){
@@ -54,11 +51,11 @@ public class Main {
             } else if (choice == 2) {
                 printResults(students, staffMembers);
                 break;
+            } else{
+                printResults(students, staffMembers);
+                break;
             }
         }
-
-
-
     }
 
     public static void printResults(ArrayList<Student> students, ArrayList<Staff> staffMembers){
@@ -82,11 +79,10 @@ public class Main {
         System.out.println("\n----------------Accounting Results----------------");
         System.out.println("Incoming: $" + String.format("%.2f", fees));
         //I didnt want - signs in the report if there is a deficit but instead to have the () things
+        System.out.println("Outgoing: $" + String.format("%.2f", salaries));
         if(total < 0 ) {
-            System.out.println("Outgoing: $" + String.format("%.2f", salaries));
             System.out.println("Total: $" + String.format("(%.2f)", -total));
         }else{
-            System.out.println("Outgoing: $" + String.format("%.2f", salaries));
             System.out.println("Total: $" + String.format("%.2f", total));
         }
     }
